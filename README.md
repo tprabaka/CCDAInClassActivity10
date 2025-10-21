@@ -30,8 +30,6 @@ Before starting the assignment, ensure you have the following software installed
 
 ### **1. Project Structure**
 
-Ensure your project directory follows the structure below:
-
 ```
 CCDAInClassActivity10/
 ├── outputs/
@@ -51,15 +49,15 @@ CCDAInClassActivity10/
 
 ### **2. Running the Analysis Tasks**
 
-You can run the analysis tasks either locally or codesapce.
+We can run the analysis tasks either locally or codesapce.
 
-1. **Execute Each Task **: The data_generator.py should be continuosly running on a terminal. open a new terminal to execute each of the tasks.
+1. **Execute Each Task** : The data_generator.py should be continuosly running on a terminal. open a new terminal to execute each of the tasks.
    ```bash
      python data_generator.py
      python task4.py
      python task5.py
    ```
-2. **The final resulting dataframes based on the predciton by the linear regression model will be show in in the terminal console.
+2. The final resulting dataframes based on the predciton by the linear regression model will be show in in the terminal console.
 
 ---
 
