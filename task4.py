@@ -5,6 +5,7 @@ from pyspark.sql.types import StructType, StructField, StringType, IntegerType, 
 
 # Import necessary MLlib classes
 # TODO: Import VectorAssembler, LinearRegression, and LinearRegressionModel
+from pyspark.ml.feature import VectorAssembler, LinearRegression, LinearRegressionModel
 
 # Create Spark Session
 spark = SparkSession.builder.appName("Task4_FarePrediction_Assignment").getOrCreate()
@@ -24,7 +25,9 @@ if not os.path.exists(MODEL_PATH):
 
     # TODO: Cast `distance_km` and `fare_amount` columns to DoubleType for ML
     # HINT: Use the .withColumn() and .cast() methods.
-    train_df = None # Replace None with your implementation
+    columnsToCast =['distance_km','fare_amount']
+    for column in columnsToCast:
+        train_df = train_df_raw.withColumn(column, col(column)).cast('double')
 
     # TODO: Create a VectorAssembler to combine feature columns into a single 'features' vector.
     # The input column should be 'distance_km'.
